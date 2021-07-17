@@ -9,10 +9,6 @@ inputs:
     description: 'GitHub access token with Repo scope'
     required: true
     default: ${{ github.token }}
-  REPOSITORY:
-    description: 'GitHub repository'
-    required: true
-    default: ${{ github.repository }}
 
 runs:
   using: 'node12'

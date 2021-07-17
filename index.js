@@ -5,11 +5,13 @@ const countries = require('i18n-iso-countries');
 const moment = require('moment');
 
 const generateRegex = tag => new RegExp(`(?<=(${tag}))(.*?)(?=\s*(${tag}))`);
-const replacePlaceholder = (tags, value, ascii) => {
+const replaceTags = (tags, value, ascii) => {
 	let response = ascii;
 
 	tags.forEach(tag => {
-		response = ascii.replace(generateRegex(`<!--osu-${tag}-->`), value);	
+		const newTag = `<!--osu-${tag}-->`;
+		console.log(`Replacing ${newTag} with ${value}`)
+		ascii.replaceAll(generateRegex(newTag), value);
 	});
 
 	return response;
@@ -49,23 +51,23 @@ try {
 					let readmeASCII = readmeBuffer.toString('ascii');
 
 					// Update the ASCII, replacing all placeholders supported by the action
-					readmeASCII = replacePlaceholder(['name', 'username'], res.username, readmeASCII);					
-					readmeASCII = replacePlaceholder(['id'], res.id, readmeASCII);
-					readmeASCII = replacePlaceholder(['rank', 'global-rank'], `#${res.globalRank.toLocaleString()}`, readmeASCII);
-					readmeASCII = replacePlaceholder(['country-rank'], `#${res.countryRank.toLocaleString()}`, readmeASCII);					
-					readmeASCII = replacePlaceholder(['country'], countries.getName(res.country), readmeASCII);
-					readmeASCII = replacePlaceholder(['pp'], res.pp, readmeASCII);
-					readmeASCII = replacePlaceholder(['level'], Math.floor(res.level), readmeASCII);
-					readmeASCII = replacePlaceholder(['time'], res.timePlayed, readmeASCII);
-					readmeASCII = replacePlaceholder(['accuracy'], res.accuracy, readmeASCII);
-					readmeASCII = replacePlaceholder(['avatar', 'pfp'], res.avatar, readmeASCII);
-					readmeASCII = replacePlaceholder(['join', 'join-date'], moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A'), readmeASCII);
-					readmeASCII = replacePlaceholder(['play', 'playcount', 'play-count'], res.playCount.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['ranked', 'ranked-score'], res.scores.ranked.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['score', 'total', 'total-score'], res.scores.total.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['ss', 'ranks-ss'], res.ranks.ss.total.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['s', 'ranks-s'], res.ranks.s.total.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['a', 'ranks-a'], res.ranks.a.toLocaleString(), readmeASCII);
+					readmeASCII = replaceTags(['name', 'username'], res.username, readmeASCII);					
+					readmeASCII = replaceTags(['id'], res.id, readmeASCII);
+					readmeASCII = replaceTags(['rank', 'global-rank'], `#${res.globalRank.toLocaleString()}`, readmeASCII);
+					readmeASCII = replaceTags(['country-rank'], `#${res.countryRank.toLocaleString()}`, readmeASCII);					
+					readmeASCII = replaceTags(['country'], countries.getName(res.country), readmeASCII);
+					readmeASCII = replaceTags(['pp'], res.pp, readmeASCII);
+					readmeASCII = replaceTags(['level'], Math.floor(res.level), readmeASCII);
+					readmeASCII = replaceTags(['time'], res.timePlayed, readmeASCII);
+					readmeASCII = replaceTags(['accuracy'], res.accuracy, readmeASCII);
+					readmeASCII = replaceTags(['avatar', 'pfp'], res.avatar, readmeASCII);
+					readmeASCII = replaceTags(['join', 'join-date'], moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A'), readmeASCII);
+					readmeASCII = replaceTags(['play', 'playcount', 'play-count'], res.playCount.toLocaleString(), readmeASCII);
+					readmeASCII = replaceTags(['ranked', 'ranked-score'], res.scores.ranked.toLocaleString(), readmeASCII);
+					readmeASCII = replaceTags(['score', 'total', 'total-score'], res.scores.total.toLocaleString(), readmeASCII);
+					readmeASCII = replaceTags(['ss', 'ranks-ss'], res.ranks.ss.total.toLocaleString(), readmeASCII);
+					readmeASCII = replaceTags(['s', 'ranks-s'], res.ranks.s.total.toLocaleString(), readmeASCII);
+					readmeASCII = replaceTags(['a', 'ranks-a'], res.ranks.a.toLocaleString(), readmeASCII);
 
 					// Convert the ASCII back into base64
 					const contentBuffer = Buffer.from(readmeASCII, 'ascii');

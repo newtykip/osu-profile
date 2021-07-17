@@ -1,4 +1,8 @@
 {
+  "name": "osu-profile",
+  "description": "GitHub action to inject information about your osu! profile to your readme",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "@actions/core": "^1.4.0",
     "@actions/github": "^5.0.0",

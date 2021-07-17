@@ -3,14 +3,10 @@ const github = require('@actions/github');
 const https = require('https');
 const moment = require('moment');
 
-const generateRegex = tag => `(?<=(<!--osu-${tag}-->))(.*?)(?=\s*(<!--osu-${tag}-->))`;
 const replaceTag = (tag, value, ascii) => {
-	let response = ascii;
-
-	console.log(`Replacing <!--osu-${tag}--> with ${value}, if it is in the readme.`)
-	response = ascii.replace(new RegExp(generateRegex(tag), 'g'), value);
-
-	return response;
+	const regex = new RegExp(`(?<=(<!--osu-${tag}-->))(.*?)(?=\s*(<!--osu-${tag}-->))`, 'g');
+	console.log(tag, value);
+	return ascii.replace(regex, value);
 }
 
 try {
@@ -77,9 +73,9 @@ try {
 						path: readme.path,
 						sha: readme.sha,
 						content,
-						message: 'Updated osu! rank',
+						message: 'Updated osu! profile',
 						committer: {
-							name: 'rank-bot',
+							name: 'osu-bot',
 							email: '41898282+github-actions[bot]@users.noreply.github.com'
 						}
 					});

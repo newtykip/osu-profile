@@ -1,7 +1,13 @@
-# osu-profile action
+<div align="center">
+    <img src="readme.gif">
+    <h1>osu-profile</h1>
+</div>
 
-This action exposes tags for you to include information about your osu! account on your GitHub profile readme.
-Incredibly scuffed - it's my first GitHub action, be patient with me and my constants commits (:
+osu-profile is a GitHub Action that makes use of [about.newtt.me](https://about.newtt.me/)'s /api/osu endpoint to get statistics about an osu!profile, and inject them into a GitHub profile readme.
+
+It makes use of HTML comments and tags to inject this data - you can find important information about using this action for yourself below.
+
+The code is incredibly scuffed, and so is this entire project - please be patient, this is my first ever attempt at making an action or anything with the GitHub API at all for that matter. I might come back to this in the future when I am more experienced and make it a tad more seamless, but for now it is what it is! (feel free to contribute if there is anything you feel like you could do to improve the project though, contributions are always appreciated <3)
 
 ## Inputs
 
@@ -19,70 +25,30 @@ with:
 
 ## Tags
 
-Every one of these placeholders must be surrounded with a HTML comment in order for osu-profile to replace it.
+Each of these tags must be surrounded with a HTML comment in order for osu-profile to inject the relevant data.
 
-For example, **osu-name** would become **\<!--osu-name--->\<!--osu-name--->**
+For example, the tag **username** would be represented in your readme as
+```
+<!--osu-username---><!--osu-username--->
+```
 
-### osu-username
+| Tag          | Replaces with...                | Example                              |
+|--------------|---------------------------------|--------------------------------------|
+| username     | Your username!                  | Newt x3                              |
+| id           | Your profile ID!                | 16009610                             |
+| global-rank  | Your global rank!               | #80,000                              |
+| country-rank | Your rank in your country!      | #2,810                               |
+| country      | Your country's code!            | GB                                   |
+| pp           | Your overall pp!                | 4364                                 |
+| level        | Your level!                     | 99                                   |
+| time         | The time you have played for!   | 2 weeks, 4 days, 6 hours, 50 minutes |
+| accuracy     | Your overall account accuracy!  | 99.59                                |
+| join-date    | Your join date!                 | Sat, Jan 18th, 2020 7:18 PM          |
+| play-count   | Your play count!                | 33,942                               |
+| ranked-score | Your ranked score!              | 4,318,622,818                        |
+| total-score  | Your total score!               | 22,074,479,155                       |
+| ss           | The amount of SSes you have!    | 128                                  |
+| s            | The amount of S ranks you have! | 558                                  |
+| a            | The amount of A ranks you have! | 671                                  |
 
-Gets replaced with your username!
-
-### osu-id
-
-Gets replaced with your profile ID!
-
-### osu-global-rank
-
-Gets replaced with your global rank!
-
-### osu-country-rank
-
-Gets replaced with your rank in the country!
-
-### osu-country
-
-Gets replaced with your country!
-
-### osu-pp
-
-Gets replaced with your total pp!
-
-### osu-level
-
-Gets replaced with your level!
-
-### osu-time
-
-Gets replaced with the time you have played for!
-
-### osu-accuracy
-
-Gets replaced with your overall account accuracy!
-
-### osu-join-date
-
-Gets replaced with your join date!
-
-### osu-play-count
-
-Gets replaced with your playcount!
-
-### osu-ranked-score
-
-Gets replaced with your ranked score!
-
-### osu-total-score
-
-Gets replaced with your total score!
-
-### osu-ss
-
-Gets replaced with the amount of SSes you have!
-
-### osu-s
-
-Gets replaced with the amount of S ranks you have!
-
-### osu-a
-
-Gets replaced with the amount of A ranks you have!
+<sub>See the code's license <a href="license.md">here.</sub>

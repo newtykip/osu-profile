@@ -30,7 +30,8 @@ try {
 					console.log(readme.path, readme.content);
 					const readmeBuffer = Buffer.from(readme.content, 'base64');
 					let readmeASCII = readmeBuffer.toString('ascii');
-					readmeASCII = readmeASCII.replace('<<rank>>', rank);
+					// <!--osurank-->rank<!--osurank-->
+					readmeASCII = readmeASCII.replace(/(?<=(<!--osurank-->))(.*?)(?=\s*(<!--osurank-->))/, rank);
 					const contentBuffer = Buffer.from(readmeASCII, 'ascii');
 					const content = contentBuffer.toString('base64');
 

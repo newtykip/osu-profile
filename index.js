@@ -4,14 +4,11 @@ const https = require('https');
 const moment = require('moment');
 
 const generateRegex = tag => `(?<=(<!--osu-${tag}-->))(.*?)(?=\s*(<!--osu-${tag}-->))`;
-const replaceTags = (tags, value, ascii) => {
+const replaceTag = (tag, value, ascii) => {
 	let response = ascii;
 
-	tags.forEach(tag => {
-		console.log(`Replacing <!--osu-${tag}--> with ${value}, if it exists.`)
-		console.log(new RegExp(generateRegex(tag), 'g'))
-		response = ascii.replace(new RegExp(generateRegex(tag), 'g'), value);
-	});
+	console.log(`Replacing <!--osu-${tag}--> with ${value}, if it is in the readme.`)
+	response = ascii.replace(new RegExp(generateRegex(tag), 'g'), value);
 
 	return response;
 }
@@ -50,22 +47,22 @@ try {
 					let readmeASCII = readmeBuffer.toString('ascii');
 
 					// Update the ASCII, replacing all placeholders supported by the action
-					readmeASCII = replaceTags(['name', 'username'], res.username, readmeASCII);					
-					readmeASCII = replaceTags(['id'], parseInt(res.id), readmeASCII);
-					readmeASCII = replaceTags(['rank', 'global-rank'], `#${parseInt(res.globalRank).toLocaleString()}`, readmeASCII);
-					readmeASCII = replaceTags(['country-rank'], `#${parseInt(res.countryRank).toLocaleString()}`, readmeASCII);					
-					readmeASCII = replaceTags(['country'], res.country, readmeASCII);
-					readmeASCII = replaceTags(['pp'], parseInt(res.pp), readmeASCII);
-					readmeASCII = replaceTags(['level'], Math.floor(res.level), readmeASCII);
-					readmeASCII = replaceTags(['time'], res.timePlayed, readmeASCII);
-					readmeASCII = replaceTags(['accuracy'], parseFloat(res.accuracy), readmeASCII);
-					readmeASCII = replaceTags(['join', 'join-date'], moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A'), readmeASCII);
-					readmeASCII = replaceTags(['play', 'playcount', 'play-count'], parseInt(res.playCount).toLocaleString(), readmeASCII);
-					readmeASCII = replaceTags(['ranked', 'ranked-score'], parseInt(res.scores.ranked).toLocaleString(), readmeASCII);
-					readmeASCII = replaceTags(['score', 'total', 'total-score'], parseInt(res.scores.total).toLocaleString(), readmeASCII);
-					readmeASCII = replaceTags(['ss', 'ranks-ss'], parseInt(res.ranks.ss.total).toLocaleString(), readmeASCII);
-					readmeASCII = replaceTags(['s', 'ranks-s'], parseInt(res.ranks.s.total).toLocaleString(), readmeASCII);
-					readmeASCII = replaceTags(['a', 'ranks-a'], parseInt(res.ranks.a).toLocaleString(), readmeASCII);
+					readmeASCII = replaceTag('username', res.username, readmeASCII);					
+					readmeASCII = replaceTag('id', parseInt(res.id), readmeASCII);
+					readmeASCII = replaceTag('global-rank', `#${parseInt(res.globalRank).toLocaleString()}`, readmeASCII);
+					readmeASCII = replaceTag('country-rank', `#${parseInt(res.countryRank).toLocaleString()}`, readmeASCII);					
+					readmeASCII = replaceTag('country', res.country, readmeASCII);
+					readmeASCII = replaceTag('pp', parseInt(res.pp), readmeASCII);
+					readmeASCII = replaceTag('level', Math.floor(res.level), readmeASCII);
+					readmeASCII = replaceTag('time', res.timePlayed, readmeASCII);
+					readmeASCII = replaceTag('accuracy', parseFloat(res.accuracy), readmeASCII);
+					readmeASCII = replaceTag('join-date', moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A'), readmeASCII);
+					readmeASCII = replaceTag('play-count', parseInt(res.playCount).toLocaleString(), readmeASCII);
+					readmeASCII = replaceTag('ranked-score', parseInt(res.scores.ranked).toLocaleString(), readmeASCII);
+					readmeASCII = replaceTag('total-score', parseInt(res.scores.total).toLocaleString(), readmeASCII);
+					readmeASCII = replaceTag('ss', parseInt(res.ranks.ss.total).toLocaleString(), readmeASCII);
+					readmeASCII = replaceTag('s', parseInt(res.ranks.s.total).toLocaleString(), readmeASCII);
+					readmeASCII = replaceTag('a', parseInt(res.ranks.a).toLocaleString(), readmeASCII);
 
 					console.log(readmeASCII);
 

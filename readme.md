@@ -23,7 +23,7 @@ Every one of these placeholders must be surrounded with a HTML comment in order 
 
 For example, **osu-name** would become **\<!--osu-name--->\<!--osu-name--->**
 
-### osu-name // osu-username
+### osu-username
 
 Gets replaced with your username!
 
@@ -31,7 +31,7 @@ Gets replaced with your username!
 
 Gets replaced with your profile ID!
 
-### osu-rank // osu-global-rank
+### osu-global-rank
 
 Gets replaced with your global rank!
 
@@ -59,30 +59,30 @@ Gets replaced with the time you have played for!
 
 Gets replaced with your overall account accuracy!
 
-### osu-join // osu-join-date
+### osu-join-date
 
 Gets replaced with your join date!
 
-### osu-play // osu-playcount // osu-play-count
+### osu-play-count
 
 Gets replaced with your playcount!
 
-### osu-ranked // osu-ranked-score
+### osu-ranked-score
 
 Gets replaced with your ranked score!
 
-### osu-score // osu-total // osu-total-score
+### osu-total-score
 
 Gets replaced with your total score!
 
-### osu-ss // osu-ranks-ss
+### osu-ss
 
 Gets replaced with the amount of SSes you have!
 
-### osu-s // osu-ranks-s
+### osu-s
 
 Gets replaced with the amount of S ranks you have!
 
-### osu-a // osu-ranks-a
+### osu-a
 
 Gets replaced with the amount of A ranks you have!

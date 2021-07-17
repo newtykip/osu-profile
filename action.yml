@@ -5,6 +5,14 @@ inputs:
   ID:
     description: 'The ID of the osu! account to lookup'
     required: true
+  GH_TOKEN:
+    description: 'GitHub access token with Repo scope'
+    required: true
+    default: ${{ github.token }}
+  REPOSITORY:
+    description: 'GitHub repository'
+    required: true
+    default: ${{ github.repository }}
 
 runs:
   using: 'node12'

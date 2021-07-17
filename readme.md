@@ -1,9 +1,9 @@
 <div align="center">
     <img src="readme.gif">
-    <h1>osu-profile</h1>
+    <h1>osu!profile</h1>
 </div>
 
-osu-profile is a GitHub Action that makes use of [about.newtt.me](https://about.newtt.me/)'s /api/osu endpoint to get statistics about an osu!profile, and inject them into a GitHub profile readme.
+osu!profile is a GitHub Action that makes use of [about.newtt.me](https://about.newtt.me/)'s /api/osu endpoint to get statistics about an osu! profile, and inject them into a GitHub profile readme.
 
 It makes use of HTML comments and tags to inject this data - you can find important information about using this action for yourself below.
 
@@ -25,7 +25,7 @@ with:
 
 ## Tags
 
-Each of these tags must be surrounded with a HTML comment in order for osu-profile to inject the relevant data.
+Each of these tags must be surrounded with a HTML comment in order for osu!profile to inject the relevant data.
 
 For example, the tag **username** would be represented in your readme as
 ```

@@ -1,6 +1,7 @@
-name: 'osu! rank'
+name: 'osu!profile'
 author: newtykins
-description: 'Show off your osu! rank in your profile readme!'
+description: 'GitHub action to inject information about your osu! profile to your readme'
+
 inputs:
   ID:
     description: 'The ID of the osu! account to lookup'
@@ -13,3 +14,7 @@ inputs:
 runs:
   using: 'node12'
   main: 'index.js'
+
+branding:
+  icon: 'activity'
+  color: 'purple'

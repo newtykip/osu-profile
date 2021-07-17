@@ -4,6 +4,10 @@ This action exposes placeholders for you to include information about your osu! 
 
 ## Placeholders
 
+### \<!--osu-id-->\<!--osu-id-->
+
+Gets replaced with your osu profile ID!
+
 #### \<!--osu-rank-->\<!--osu-rank-->
 
 Gets replaced with your global rank on osu!

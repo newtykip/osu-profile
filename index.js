@@ -39,7 +39,8 @@ try {
 					let readmeASCII = readmeBuffer.toString('ascii');
 
 					// Update the ASCII, replacing all placeholders supported by the action
-					readmeASCII = replacePlaceholder('<!--osu-rank-->', rank);
+					readmeASCII = replacePlaceholder('<!--osu-rank-->', rank, readmeASCII);
+					readmeASCII = replacePlaceholder('<!--osu-id-->', res.id, readmeASCII);
 
 					// Convert the ASCII back into base64
 					const contentBuffer = Buffer.from(readmeASCII, 'ascii');

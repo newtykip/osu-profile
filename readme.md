@@ -58,10 +58,6 @@ Gets replaced with the time you have played for!
 
 Gets replaced with your overall account accuracy!
 
-### osu-avatar // osu-pfp
-
-Gets replaced with a URL to your account's avatar!
-
 ### osu-join // osu-join-date
 
 Gets replaced with your join date!

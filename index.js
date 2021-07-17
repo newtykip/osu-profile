@@ -64,7 +64,6 @@ try {
 					readmeASCII = replaceTags(['level'], Math.floor(res.level), readmeASCII);
 					readmeASCII = replaceTags(['time'], res.timePlayed, readmeASCII);
 					readmeASCII = replaceTags(['accuracy'], res.accuracy, readmeASCII);
-					readmeASCII = replaceTags(['avatar', 'pfp'], `![${res.username}'s Profile Picture](${res.avatar})`, res.avatar, readmeASCII);
 					readmeASCII = replaceTags(['join', 'join-date'], moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A'), readmeASCII);
 					readmeASCII = replaceTags(['play', 'playcount', 'play-count'], res.playCount.toLocaleString(), readmeASCII);
 					readmeASCII = replaceTags(['ranked', 'ranked-score'], res.scores.ranked.toLocaleString(), readmeASCII);

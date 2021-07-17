@@ -9,8 +9,11 @@ try {
 	const owner = process.env.GITHUB_REPOSITORY.split('/')[0];
 	const repo = process.env.GITHUB_REPOSITORY.split('/')[1]; 
 	console.log(process.env.GITHUB_REPOSITORY, owner, repo);
-	const repoData = await octokit.rest.repos.get({ owner, repo });
-	console.log(repoData.data.url)
+	
+	octokit.rest.repos.get({ owner, repo })
+		.then(({ data }) => {
+			console.log(data.url)
+		});
 
 	// Request the user's profile information
 	https.get(`https://about.newtt.me/api/osu/${id}`, (resp) => {

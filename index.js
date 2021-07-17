@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const https = require('https');
-const countries = require('i18n-iso-countries');
+const countrynames = require('countrynames');
 const moment = require('moment');
 
 String.prototype.capitalise = function () {
@@ -64,12 +64,12 @@ try {
 					readmeASCII = replaceTags(['id'], res.id, readmeASCII);
 					readmeASCII = replaceTags(['rank', 'global-rank'], `#${res.globalRank.toLocaleString()}`, readmeASCII);
 					readmeASCII = replaceTags(['country-rank'], `#${res.countryRank.toLocaleString()}`, readmeASCII);					
-					readmeASCII = replaceTags(['country'], countries.getName(res.country).split(' ').map((w) => w.capitalise()).join(' '), readmeASCII);
+					readmeASCII = replaceTags(['country'], countrynames.getName(res.country).split(' ').map((w) => w.capitalise()).join(' '), readmeASCII);
 					readmeASCII = replaceTags(['pp'], res.pp, readmeASCII);
 					readmeASCII = replaceTags(['level'], Math.floor(res.level), readmeASCII);
 					readmeASCII = replaceTags(['time'], res.timePlayed, readmeASCII);
 					readmeASCII = replaceTags(['accuracy'], res.accuracy, readmeASCII);
-					readmeASCII = replaceTags(['avatar', 'pfp'], res.avatar, readmeASCII);
+					readmeASCII = replaceTags(['avatar', 'pfp'], `![${res.username}'s Profile Picture](${res.avatar})`, res.avatar, readmeASCII);
 					readmeASCII = replaceTags(['join', 'join-date'], moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A'), readmeASCII);
 					readmeASCII = replaceTags(['play', 'playcount', 'play-count'], res.playCount.toLocaleString(), readmeASCII);
 					readmeASCII = replaceTags(['ranked', 'ranked-score'], res.scores.ranked.toLocaleString(), readmeASCII);

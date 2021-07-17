@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@actions/core": "^1.4.0",
-    "@actions/github": "^5.0.0"
+    "@actions/github": "^5.0.0",
+    "i18n-iso-countries": "^6.8.0",
+    "moment": "^2.29.1"
   }
 }

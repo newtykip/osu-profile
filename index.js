@@ -1,12 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const https = require('https');
-const countrynames = require('countrynames');
 const moment = require('moment');
-
-String.prototype.capitalise = function () {
-	return `${this.charAt(0).toUpperCase()}${this.slice(1)}`;
-}
 
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
@@ -64,7 +59,7 @@ try {
 					readmeASCII = replaceTags(['id'], res.id, readmeASCII);
 					readmeASCII = replaceTags(['rank', 'global-rank'], `#${res.globalRank.toLocaleString()}`, readmeASCII);
 					readmeASCII = replaceTags(['country-rank'], `#${res.countryRank.toLocaleString()}`, readmeASCII);					
-					readmeASCII = replaceTags(['country'], countrynames.getName(res.country).split(' ').map((w) => w.capitalise()).join(' '), readmeASCII);
+					readmeASCII = replaceTags(['country'], res.country, readmeASCII);
 					readmeASCII = replaceTags(['pp'], res.pp, readmeASCII);
 					readmeASCII = replaceTags(['level'], Math.floor(res.level), readmeASCII);
 					readmeASCII = replaceTags(['time'], res.timePlayed, readmeASCII);

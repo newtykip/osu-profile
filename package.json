@@ -2,7 +2,6 @@
   "dependencies": {
     "@actions/core": "^1.4.0",
     "@actions/github": "^5.0.0",
-    "countrynames": "^0.1.1",
     "moment": "^2.29.1"
   }
 }

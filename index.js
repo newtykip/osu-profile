@@ -5,11 +5,11 @@ const countries = require('i18n-iso-countries');
 const moment = require('moment');
 
 const generateRegex = tag => new RegExp(`(?<=(${tag}))(.*?)(?=\s*(${tag}))`);
-const replacePlaceholder = (placeholders, value, ascii) => {
+const replacePlaceholder = (tags, value, ascii) => {
 	let response = ascii;
 
-	placeholders.forEach(placeholder => {
-		response = ascii.replace(generateRegex(placeholder), value);	
+	tags.forEach(tag => {
+		response = ascii.replace(generateRegex(`<!--osu-${tag}-->`), value);	
 	});
 
 	return response;
@@ -36,6 +36,7 @@ try {
 		// Parse it
 		resp.on('end', () => {
 			const res = JSON.parse(data);
+			console.log(res);
 
 			// Get the readme from the repository
 			octokit.rest.repos.getReadme({
@@ -48,23 +49,23 @@ try {
 					let readmeASCII = readmeBuffer.toString('ascii');
 
 					// Update the ASCII, replacing all placeholders supported by the action
-					readmeASCII = replacePlaceholder(['<!--osu-name-->', '<!--osu-username-->'], res.username, readmeASCII);					
-					readmeASCII = replacePlaceholder(['<!--osu-id-->'], res.id, readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-rank-->', '<!--osu-global-rank-->'], `#${res.globalRank.toLocaleString()}`, readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-country-rank-->'], `#${res.countryRank.toLocaleString()}`, readmeASCII);					
-					readmeASCII = replacePlaceholder(['<!--osu-country-->'], countries.getName(res.country), readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-pp-->'], res.pp, readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-level-->'], Math.floor(res.level), readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-time-->'], res.timePlayed, readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-accuracy-->'], res.accuracy, readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-avatar-->'], res.avatar, readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-join-date-->'], moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A'), readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-playcount-->'], res.playCount.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-ranked-score-->'], res.scores.ranked.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-total-score-->'], res.scores.total.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-ranks-ss-->'], res.ranks.ss.total.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-ranks-s-->'], res.ranks.s.total.toLocaleString(), readmeASCII);
-					readmeASCII = replacePlaceholder(['<!--osu-ranks-a-->'], res.ranks.a.total.toLocaleString(), readmeASCII);
+					readmeASCII = replacePlaceholder(['name', 'username'], res.username, readmeASCII);					
+					readmeASCII = replacePlaceholder(['id'], res.id, readmeASCII);
+					readmeASCII = replacePlaceholder(['rank', 'global-rank'], `#${res.globalRank.toLocaleString()}`, readmeASCII);
+					readmeASCII = replacePlaceholder(['country-rank'], `#${res.countryRank.toLocaleString()}`, readmeASCII);					
+					readmeASCII = replacePlaceholder(['country'], countries.getName(res.country), readmeASCII);
+					readmeASCII = replacePlaceholder(['pp'], res.pp, readmeASCII);
+					readmeASCII = replacePlaceholder(['level'], Math.floor(res.level), readmeASCII);
+					readmeASCII = replacePlaceholder(['time'], res.timePlayed, readmeASCII);
+					readmeASCII = replacePlaceholder(['accuracy'], res.accuracy, readmeASCII);
+					readmeASCII = replacePlaceholder(['avatar', 'pfp'], res.avatar, readmeASCII);
+					readmeASCII = replacePlaceholder(['join', 'join-date'], moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A'), readmeASCII);
+					readmeASCII = replacePlaceholder(['play', 'playcount', 'play-count'], res.playCount.toLocaleString(), readmeASCII);
+					readmeASCII = replacePlaceholder(['ranked', 'ranked-score'], res.scores.ranked.toLocaleString(), readmeASCII);
+					readmeASCII = replacePlaceholder(['score', 'total', 'total-score'], res.scores.total.toLocaleString(), readmeASCII);
+					readmeASCII = replacePlaceholder(['ss', 'ranks-ss'], res.ranks.ss.total.toLocaleString(), readmeASCII);
+					readmeASCII = replacePlaceholder(['s', 'ranks-s'], res.ranks.s.total.toLocaleString(), readmeASCII);
+					readmeASCII = replacePlaceholder(['a', 'ranks-a'], res.ranks.a.toLocaleString(), readmeASCII);
 
 					// Convert the ASCII back into base64
 					const contentBuffer = Buffer.from(readmeASCII, 'ascii');
@@ -79,7 +80,7 @@ try {
 						content,
 						message: 'Updated osu! rank',
 						committer: {
-							name: 'osu-rank-bot',
+							name: 'rank-bot',
 							email: '41898282+github-actions[bot]@users.noreply.github.com'
 						}
 					});

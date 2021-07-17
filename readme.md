@@ -1,6 +1,6 @@
 # osu-profile action
 
-This action exposes placeholders for you to include information about your osu! account on your GitHub profile readme.
+This action exposes tags for you to include information about your osu! account on your GitHub profile readme.
 
 ## Inputs
 
@@ -16,72 +16,76 @@ with:
 	ID: '16009610'
 ```
 
-## Placeholders
+## Tags
 
-### \<!--osu-name-->\<!--osu-name--> or \<!--osu-username-->\<!--osu-username-->
+Every one of these placeholders must be surrounded with a HTML comment in order for osu-profile to replace it.
+
+For example, **osu-name** would become **\<!--osu-name--->\<!--osu-name--->**
+
+### osu-name // osu-username
 
 Gets replaced with your username!
 
-### \<!--osu-id-->\<!--osu-id-->
+### osu-id
 
 Gets replaced with your profile ID!
 
-### \<!--osu-rank-->\<!--osu-rank--> or \<!--osu-global-rank-->\<!--osu-global-rank--> 
+### osu-rank // osu-global-rank
 
 Gets replaced with your global rank!
 
-### \<!--osu-country-rank-->\<!--osu-country-rank-->
+### osu-country-rank
 
 Gets replaced with your rank in the country!
 
-### \<!--osu-country-->\<!--osu-country-->
+### osu-country
 
 Gets replaced with your country!
 
-### \<!--osu-pp-->\<!--osu-pp-->
+### osu-pp
 
 Gets replaced with your total pp!
 
-### \<!--osu-level-->\<!--osu-level-->
+### osu-level
 
 Gets replaced with your level!
 
-### \<!--osu-time-->\<!--osu-time-->
+### osu-time
 
 Gets replaced with the time you have played for!
 
-### \<!--osu-accuracy-->\<!--osu-accuracy-->
+### osu-accuracy
 
 Gets replaced with your overall account accuracy!
 
-### \<!--osu-avatar-->\<!--osu-avatar-->
+### osu-avatar // osu-pfp
 
 Gets replaced with a URL to your account's avatar!
 
-### \<!--osu-join-date-->\<!--osu-join-date-->
+### osu-join // osu-join-date
 
 Gets replaced with your join date!
 
-### \<!--osu-playcount-->\<!--osu-playcount-->
+### osu-play // osu-playcount // osu-play-count
 
 Gets replaced with your playcount!
 
-### \<!--osu-ranked-score-->\<!--osu-ranked-score-->
+### osu-ranked // osu-ranked-score
 
 Gets replaced with your ranked score!
 
-### \<!--osu-total-score-->\<!--osu-total-score-->
+### osu-score // osu-total // osu-total-score
 
 Gets replaced with your total score!
 
-### \<!--osu-ranks-ss-->\<!--osu-ranks-ss-->
+### osu-ss // osu-ranks-ss
 
 Gets replaced with the amount of SSes you have!
 
-### \<!--osu-ranks-s-->\<!--osu-ranks-s-->
+### osu-s // osu-ranks-s
 
 Gets replaced with the amount of S ranks you have!
 
-### \<!--osu-ranks-a-->\<!--osu-ranks-a-->
+### osu-a // osu-ranks-a
 
 Gets replaced with the amount of A ranks you have!

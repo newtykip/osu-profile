@@ -1,6 +1,7 @@
 # osu-profile action
 
 This action exposes tags for you to include information about your osu! account on your GitHub profile readme.
+Incredibly scuffed - it's my first GitHub action, be patient with me and my constants commits (:
 
 ## Inputs
 

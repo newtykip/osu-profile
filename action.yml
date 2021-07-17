@@ -1,0 +1,11 @@
+name: 'osu! rank'
+author: newtykins
+description: 'Show off your osu! rank in your profile readme!'
+inputs:
+  ID:
+    description: 'The ID of the osu! account to lookup'
+    required: true
+
+runs:
+  using: 'node14'
+  main: 'index.js'

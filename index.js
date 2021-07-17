@@ -28,6 +28,9 @@ try {
 			})
 				.then(({ data: readme }) => {
 					console.log(readme.path, readme.content);
+					const contentBuffer = new Buffer(readme.content, 'base64');
+					let content = contentBuffer.toString('ascii');
+					console.log(content);
 
 					/*
 					// Update the readme

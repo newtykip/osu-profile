@@ -28,23 +28,25 @@ try {
 			})
 				.then(({ data: readme }) => {
 					console.log(readme.path, readme.content);
-					const contentBuffer = new Buffer(readme.content, 'base64');
-					let content = contentBuffer.toString('ascii');
-					console.log(content);
+					const readmeBuffer = Buffer.from(readme.content, 'base64');
+					let readmeASCII = readmeBuffer.toString('ascii');
+					readmeASCII = readmeASCII.replace('<<rank>>', rank);
+					const contentBuffer = Buffer.from(readmeASCII, 'ascii');
+					const content = contentBuffer.toString('base64');
 
-					/*
 					// Update the readme
 					octokit.rest.repos.createOrUpdateFileContents({
 						owner,
 						repo,
 						path: readme.path,
 						sha: readme.sha,
+						content,
 						message: 'Updated osu! rank',
 						committer: {
 							name: 'osu-rank-bot',
 							email: '41898282+github-actions[bot]@users.noreply.github.com'
 						}
-					})*/
+					})
 				})
 		});
 	});

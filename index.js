@@ -2,36 +2,46 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const https = require('https');
 
+const generateRegex = tag => new RegExp(`(?<=(${tag}))(.*?)(?=\s*(${tag}))`);
+const replacePlaceholder = (placeholder, value, ascii) => ascii.replace(generateRegex(placeholder), value);
+
 try {
+	// Take from input
 	const id = core.getInput('ID');
-	const token = core.getInput('GH_TOKEN')
+	const token = core.getInput('GH_TOKEN');
+
+	// Create an instance of octokit
 	const octokit = github.getOctokit(token);
+
+	// Figure out repository details
 	const owner = process.env.GITHUB_REPOSITORY.split('/')[0];
 	const repo = process.env.GITHUB_REPOSITORY.split('/')[1]; 
-	console.log(process.env.GITHUB_REPOSITORY, owner, repo);
 
 	// Request the user's profile information
 	https.get(`https://about.newtt.me/api/osu/${id}`, (resp) => {
-		// Get the data
+		// Get the profile's data
 		let data = '';		
 		resp.on('data', chunk => data += chunk);
 
 		// Parse it
 		resp.on('end', () => {
 			const res = JSON.parse(data);
-			const rank = res.globalRank.toLocaleString();
+			const rank = `#${res.globalRank.toLocaleString()}`;
 
-			// Get the readme
+			// Get the readme from the repository
 			octokit.rest.repos.getReadme({
 				owner,
 				repo,
 			})
 				.then(({ data: readme }) => {
-					console.log(readme.path, readme.content);
+					// Read the content of the readme and convert it to ASCII
 					const readmeBuffer = Buffer.from(readme.content, 'base64');
 					let readmeASCII = readmeBuffer.toString('ascii');
-					// <!--osurank-->rank<!--osurank-->
-					readmeASCII = readmeASCII.replace(/(?<=(<!--osurank-->))(.*?)(?=\s*(<!--osurank-->))/, rank);
+
+					// Update the ASCII, replacing all placeholders supported by the action
+					readmeASCII = replacePlaceholder('<!--osu-rank-->', rank);
+
+					// Convert the ASCII back into base64
 					const contentBuffer = Buffer.from(readmeASCII, 'ascii');
 					const content = contentBuffer.toString('base64');
 
@@ -47,8 +57,8 @@ try {
 							name: 'osu-rank-bot',
 							email: '41898282+github-actions[bot]@users.noreply.github.com'
 						}
-					})
-				})
+					});
+				});
 		});
 	});
 } catch (error) {

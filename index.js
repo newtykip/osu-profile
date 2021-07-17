@@ -4,6 +4,10 @@ const https = require('https');
 const countries = require('i18n-iso-countries');
 const moment = require('moment');
 
+String.prototype.capitalise = function () {
+	return `${this.charAt(0).toUpperCase()}${this.slice(1)}`;
+}
+
 const generateRegex = tag => new RegExp(`(?<=(${tag}))(.*?)(?=\s*(${tag}))`);
 const replaceTags = (tags, value, ascii) => {
 	let response = ascii;
@@ -55,7 +59,7 @@ try {
 					readmeASCII = replaceTags(['id'], res.id, readmeASCII);
 					readmeASCII = replaceTags(['rank', 'global-rank'], `#${res.globalRank.toLocaleString()}`, readmeASCII);
 					readmeASCII = replaceTags(['country-rank'], `#${res.countryRank.toLocaleString()}`, readmeASCII);					
-					readmeASCII = replaceTags(['country'], countries.getName(res.country), readmeASCII);
+					readmeASCII = replaceTags(['country'], countries.getName(res.country).split(' ').map((w) => w.capitalise()).join(' '), readmeASCII);
 					readmeASCII = replaceTags(['pp'], res.pp, readmeASCII);
 					readmeASCII = replaceTags(['level'], Math.floor(res.level), readmeASCII);
 					readmeASCII = replaceTags(['time'], res.timePlayed, readmeASCII);

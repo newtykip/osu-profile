@@ -22,7 +22,7 @@ try {
 	const repo = process.env.GITHUB_REPOSITORY.split('/')[1]; 
 
 	// Request the user's profile information
-	https.get(`https://about.newtt.me/api/osu/${id}`, (resp) => {
+	https.get(`https://newtt.me/api/osu/${id}`, (resp) => {
 		// Get the profile's data
 		let data = '';		
 		resp.on('data', chunk => data += chunk);

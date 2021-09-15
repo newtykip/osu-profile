@@ -25,30 +25,27 @@ with:
 
 ## Tags
 
-Each of these tags must be surrounded with a HTML comment in order for osu!profile to inject the relevant data.
+Each of these tags must be surrounded in a HTML comment in order for osu!profile to inject the relevant data. You can check out the [**raw version**](https://raw.githubusercontent.com/newtykins/osu-profile/main/readme.md) of this readme to see examples of the tags below!
 
-For example, the tag **username** would be represented in your readme as
-```
-<!--osu-username---><!--osu-username--->
-```
 
-| Tag          | Replaces with...                | Example                              |
-|--------------|---------------------------------|--------------------------------------|
-| username     | Your username!                  | Newt x3                              |
-| id           | Your profile ID!                | 16009610                             |
-| global-rank  | Your global rank!               | #80,000                              |
-| country-rank | Your rank in your country!      | #2,810                               |
-| country      | Your country's code!            | GB                                   |
-| pp           | Your overall pp!                | 4364                                 |
-| level        | Your level!                     | 99                                   |
-| time         | The time you have played for!   | 2 weeks, 4 days, 6 hours, 50 minutes |
-| accuracy     | Your overall account accuracy!  | 99.59                                |
-| join-date    | Your join date!                 | Sat, Jan 18th, 2020 7:18 PM          |
-| play-count   | Your play count!                | 33,942                               |
-| ranked-score | Your ranked score!              | 4,318,622,818                        |
-| total-score  | Your total score!               | 22,074,479,155                       |
-| ss           | The amount of SSes you have!    | 128                                  |
-| s            | The amount of S ranks you have! | 558                                  |
-| a            | The amount of A ranks you have! | 671                                  |
+| Tag          | Replaces with...                | Example                                        |
+|--------------|---------------------------------|------------------------------------------------|
+| username     | Your username!                  | <!--osu-username--><!--osu-username-->         |
+| id           | Your profile ID!                | <!--osu-id--><!--osu-id-->                     |
+| global-rank  | Your global rank!               | <!--osu-global-rank--><!--osu-global-rank-->   |
+| country-rank | Your rank in your country!      | <!--osu-country-rank--><!--osu-country-rank--> |
+| country      | Your country's code!            | <!--osu-country--><!--osu-country-->           |
+| pp           | Your overall pp!                | <!--osu-pp--><!--osu-pp-->                     |
+| level        | Your level!                     | <!--osu-level--><!--osu-level-->               |
+| time         | The time you have played for!   | <!--osu-time--><!--osu-time-->                 |
+| accuracy     | Your overall account accuracy!  | <!--osu-accuracy--><!--osu-accuracy-->         |
+| join-date    | Your join date!                 | <!--osu-join-date--><!--osu-join-date-->       |
+| play-count   | Your play count!                | <!--osu-play-count--><!--osu-play-count-->     |
+| ranked-score | Your ranked score!              | <!--osu-ranked-score--><!--osu-ranked-score--> |
+| total-score  | Your total score!               | <!--osu-total-score--><!--osu-total-score-->   |
+| ss           | The amount of SSes you have!    | <!--osu-ss--><!--osu-ss-->                     |
+| s            | The amount of S ranks you have! | <!--osu-s--><!--osu-s-->                       |
+| a            | The amount of A ranks you have! | <!--osu-a--><!--osu-a-->                       |
+
 
 <sub>See the code's license <a href="license.md">here.</sub>

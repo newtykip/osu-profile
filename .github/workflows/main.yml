@@ -1,14 +1,14 @@
 name: readme!
 
 on:
-  schedule:
-    - cron: '0 0 * * 1'
-  workflow_dispatch:
+    schedule:
+        - cron: '0 0 * * 1'
+    workflow_dispatch:
 jobs:
-  update-readme:
-    name: Update readme with the latest stats using osu-profile!
-    runs-on: ubuntu-latest
-    steps:
-      - uses: newtykins/osu-profile@main
-        with:
-          ID: '16009610'
+    update-readme:
+        name: Update readme with the latest stats using osu-profile!
+        runs-on: ubuntu-latest
+        steps:
+            - uses: newtykins/osu-profile@main
+              with:
+                  ID: '16009610'

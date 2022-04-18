@@ -32,23 +32,23 @@ Each of these tags must be surrounded in a HTML comment in order for osu!profile
 | username       | Your username!                      | <!--osu-username-->Newt x3<!--osu-username-->                               |
 | avatar         | Your avatar!                        | ![](<!--osu-avatar-->https://a.ppy.sh/16009610<!--osu-avatar-->)                                     |
 | id             | Your profile ID!                    | <!--osu-id-->16009610<!--osu-id-->                                          |
-| global-rank    | Your global rank!                   | <!--osu-global-rank-->55,996<!--osu-global-rank-->                         |
-| country-rank   | Your rank in your country!          | <!--osu-country-rank-->1,966<!--osu-country-rank-->                        |
+| global-rank    | Your global rank!                   | <!--osu-global-rank-->56,386<!--osu-global-rank-->                         |
+| country-rank   | Your rank in your country!          | <!--osu-country-rank-->1,978<!--osu-country-rank-->                        |
 | country        | Your country!                       | <!--osu-country-->United Kingdom<!--osu-country-->                          |
 | country-code   | Your country's code!                | <!--osu-country-code-->GB<!--osu-country-code-->                            |
-| pp             | Your overall pp!                    | <!--osu-pp-->4,892.76<!--osu-pp-->                                              |
+| pp             | Your overall pp!                    | <!--osu-pp-->4,893.29<!--osu-pp-->                                              |
 | level          | Your level!                         | <!--osu-level-->100<!--osu-level-->                                         |
-| time-ms        | The time you have played for in ms! | <!--osu-time-ms-->2,463,656,000<!--osu-time-ms-->                                        |
-| time           | The time you have played for!       | <!--osu-time-->4 weeks, 12 hours, 20 minutes, and 56 secondsssssssssssssssssssssssssss<!--osu-time--> |
+| time-ms        | The time you have played for in ms! | <!--osu-time-ms-->2,483,849,000<!--osu-time-ms-->                                        |
+| time           | The time you have played for!       | <!--osu-time-->4 weeks, 17 hours, 57 minutes, and 29 secondssssssssssssssssssssssssssss<!--osu-time--> |
 | accuracy       | Your overall account accuracy!      | <!--osu-accuracy-->99.52<!--osu-accuracy-->                                 |
 | join-date      | Your join date!                     | <!--osu-join-date-->Invalid date<!--osu-join-date-->         |
-| play-count     | Your play count!                    | <!--osu-play-count-->53,413<!--osu-play-count-->                            |
-| ranked-score   | Your ranked score!                  | <!--osu-ranked-score-->7,676,359,860<!--osu-ranked-score-->                 |
-| unranked-score | Your unranked score!                | <!--osu-unranked-score-->33,425,977,046<!--osu-unranked-score-->                          |
-| total-score    | Your total score!                   | <!--osu-total-score-->41,102,336,906<!--osu-total-score-->                  |
-| hit-count      | Your total hit count!               | <!--osu-hit-count-->7,884,956<!--osu-hit-count-->                                    |
+| play-count     | Your play count!                    | <!--osu-play-count-->53,879<!--osu-play-count-->                            |
+| ranked-score   | Your ranked score!                  | <!--osu-ranked-score-->7,749,687,704<!--osu-ranked-score-->                 |
+| unranked-score | Your unranked score!                | <!--osu-unranked-score-->33,831,600,635<!--osu-unranked-score-->                          |
+| total-score    | Your total score!                   | <!--osu-total-score-->41,581,288,339<!--osu-total-score-->                  |
+| hit-count      | Your total hit count!               | <!--osu-hit-count-->7,963,639<!--osu-hit-count-->                                    |
 | ss             | The amount of SSes you have!        | <!--osu-ss-->156<!--osu-ss-->                                               |
-| s              | The amount of S ranks you have!     | <!--osu-s-->709<!--osu-s-->                                                 |
-| a              | The amount of A ranks you have!     | <!--osu-a-->901<!--osu-a-->                                                 |
+| s              | The amount of S ranks you have!     | <!--osu-s-->710<!--osu-s-->                                                 |
+| a              | The amount of A ranks you have!     | <!--osu-a-->905<!--osu-a-->                                                 |
 
 <sub>See the code's license <a href="license.md">here.</sub>

@@ -39,7 +39,7 @@ Each of these tags must be surrounded in a HTML comment in order for osu!profile
 | pp             | Your overall pp!                    | <!--osu-pp-->5,171.41<!--osu-pp-->                                              |
 | level          | Your level!                         | <!--osu-level-->100<!--osu-level-->                                         |
 | time-ms        | The time you have played for in ms! | <!--osu-time-ms-->2,750,198,000<!--osu-time-ms-->                                        |
-| time           | The time you have played for!       | <!--osu-time-->1 month, 1 day, 9 hours, 26 minutes, and 38 secondss<!--osu-time--> |
+| time           | The time you have played for!       | <!--osu-time-->1 month, 1 day, 9 hours, 26 minutes, and 38 seconds<!--osu-time--> |
 | accuracy       | Your overall account accuracy!      | <!--osu-accuracy-->99.52<!--osu-accuracy-->                                 |
 | join-date      | Your join date!                     | <!--osu-join-date-->Invalid date<!--osu-join-date-->         |
 | play-count     | Your play count!                    | <!--osu-play-count-->60,179<!--osu-play-count-->                            |

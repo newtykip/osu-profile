@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fetch = require('node-fetch');
-const moment = require('moment');
+const dayjs = require('dayjs');
 
 const replaceTag = (tag, value, unicode) => {
     const regex = new RegExp(`(?<=(<!--osu-${tag}-->))(.*?)(?=\s*(<!--osu-${tag}-->))`, 'g');
@@ -57,7 +57,7 @@ try {
                         ['level', Math.floor(res.level)],
                         ['time', res.humanTimePlayed],
                         ['time-ms', res.timePlayedInMs.toLocaleString()],
-                        ['join-date', moment(res.joinDate).format('ddd, MMM Do, YYYY h:mm A')],
+                        ['join-date', dayjs(res.joinDate).format('ddd, MMM Do, YYYY h:mm A')],
                         ['play-count', res.playCount.toLocaleString()],
                         ['ranked-score', res.scores.ranked.toLocaleString()],
                         ['unranked-score', res.scores.unranked.toLocaleString()],

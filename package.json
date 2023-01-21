@@ -6,7 +6,6 @@
   "dependencies": {
     "@actions/core": "^1.4.0",
     "@actions/github": "^5.0.0",
-    "dayjs": "^1.11.7",
     "node-fetch": "2.6.2"
   }
 }

@@ -1,13 +1,13 @@
 name: 'osu!profile'
 author: newtykins
-description: 'GitHub action to inject information about your osu! profile to your readme'
+description: 'Inject information about your osu! profile into your readme!'
 
 inputs:
   ID:
     description: 'The ID of the osu! account to lookup'
     required: true
   GH_TOKEN:
-    description: 'GitHub access token with Repo scope'
+    description: 'GitHub access token with repo scope'
     required: true
     default: ${{ github.token }}
 

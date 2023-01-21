@@ -3,7 +3,7 @@
     <h1>osu!profile</h1>
 </div>
 
-osu!profile is a GitHub Action that makes use of [newtt.me](https://newtt.me/)'s /api/osu endpoint to get statistics about an osu! profile, and inject them into a GitHub profile readme.
+osu!profile is a GitHub Action that makes use of [newty.dev](https://newty.dev/)'s /api/osu endpoint to get statistics about an osu! profile, and inject them into a GitHub profile readme.
 
 It makes use of HTML comments and tags to inject this data - you can find important information about using this action for yourself below.
 
@@ -39,7 +39,7 @@ Each of these tags must be surrounded in a HTML comment in order for osu!profile
 | pp             | Your overall pp!                    | <!--osu-pp-->5,171.41<!--osu-pp-->                                              |
 | level          | Your level!                         | <!--osu-level-->100<!--osu-level-->                                         |
 | time-ms        | The time you have played for in ms! | <!--osu-time-ms-->2,747,914,000<!--osu-time-ms-->                                        |
-| time           | The time you have played for!       | <!--osu-time-->1 month, 1 day, 8 hours, 48 minutes, and 34 secondssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss<!--osu-time--> |
+| time           | The time you have played for!       | <!--osu-time-->1 month, 1 day, 8 hours, 48 minutes, and 34 seconds<!--osu-time--> |
 | accuracy       | Your overall account accuracy!      | <!--osu-accuracy-->99.52<!--osu-accuracy-->                                 |
 | join-date      | Your join date!                     | <!--osu-join-date-->Invalid date<!--osu-join-date-->         |
 | play-count     | Your play count!                    | <!--osu-play-count-->60,109<!--osu-play-count-->                            |

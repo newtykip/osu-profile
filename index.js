@@ -30,7 +30,7 @@ try {
     const repo = process.env.GITHUB_REPOSITORY.split('/')[1];
 
     // Request the user's profile information
-    fetch(`https://newtt.me/api/osu?id=${id}`)
+    fetch(`https://newty.dev/api/osu?id=${id}`)
         .then((res) => res.json())
         .then((res) => {
             // Get the readme from the repository
@@ -39,7 +39,7 @@ try {
                     owner,
                     repo
                 })
-                .then(({ data: readme }) => {
+                .then(({ data: readme }) => {   
                     // Read the content of the readme and convert it to Unicode
                     const readmeBuffer = Buffer.from(readme.content, 'base64');
                     let readmeUnicode = readmeBuffer.toString('utf-8');

@@ -1,19 +1,25 @@
-name: 'osu!profile'
+name: osu-profile
+description: Inject information about your osu! profile into your readme!
 author: newtykins
-description: 'Inject information about your osu! profile into your readme!'
 
 inputs:
-  ID:
-    description: 'The ID of the osu! account to lookup'
+  profile-id:
+    description: 'The ID of the osu! profile to track'
     required: true
-  GH_TOKEN:
-    description: 'GitHub access token with repo scope'
+  api-key:
+    description: 'Your osu! API key'
+    required: true
+  game-mode:
+    description: 'osu! game mode to track'
+    default: osu
+  token:
+    description: 'The GitHub token to use for manipulating the repository.'
     required: true
     default: ${{ github.token }}
 
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: node20
+  main: dist/index.js
 
 branding:
   icon: 'activity'

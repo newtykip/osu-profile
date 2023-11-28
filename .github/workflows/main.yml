@@ -1,14 +1,15 @@
-name: readme!
+name: update readme
 
 on:
     schedule:
         - cron: '0 0 * * 1'
     workflow_dispatch:
 jobs:
-    update-readme:
+    readme:
         name: Update readme with the latest stats using osu-profile!
         runs-on: ubuntu-latest
         steps:
-            - uses: newtykins/osu-profile@main
+            - uses: newtykins/osu-profile@v2
               with:
-                  ID: '16009610'
+                profile-id: '16009610'
+                api-key: ${{ secrets.osu }}

@@ -11,29 +11,30 @@ osu!profile injects statistics about an osu! profile into your readme - or a cus
 
 Last updated: <!-- osu-last-updated --><!-- osu-last-updated -->
 
-|      Tag      |                        Value                         |
-| :-----------: | :--------------------------------------------------: |
-| last-updated  |  <!-- osu-last-updated --><!-- osu-last-updated -->  |
-|      id       |            <!-- osu-id --><!-- osu-id -->            |
-|     name      |          <!-- osu-name --><!-- osu-name -->          |
-|      pp       |            <!-- osu-pp --><!-- osu-pp -->            |
-|   accuracy    |      <!-- osu-accuracy --><!-- osu-accuracy -->      |
-|     level     |         <!-- osu-level --><!-- osu-level -->         |
-|   join-date   |     <!-- osu-join-date --><!-- osu-join-date -->     |
-|    country    |       <!-- osu-country --><!-- osu-country -->       |
-| country-short | <!-- osu-country-short --><!-- osu-country-short --> |
-|  play-count   |    <!-- osu-play-count --><!-- osu-play-count -->    |
-|   play-time   |     <!-- osu-play-time --><!-- osu-play-time -->     |
-|   hit-count   |     <!-- osu-hit-count --><!-- osu-hit-count -->     |
-|   50-count    |      <!-- osu-50-count --><!-- osu-50-count -->      |
-|   100-count   |     <!-- osu-100-count --><!-- osu-100-count -->     |
-|   300-count   |     <!-- osu-300-count --><!-- osu-300-count -->     |
-|  total-score  |   <!-- osu-total-score --><!-- osu-total-score -->   |
-| ranked-score  |  <!-- osu-ranked-score --><!-- osu-ranked-score -->  |
-|  global-rank  |   <!-- osu-global-rank --><!-- osu-global-rank -->   |
-| country-rank  |  <!-- osu-country-rank --><!-- osu-country-rank -->  |
-|   ssh-count   |     <!-- osu-ssh-count --><!-- osu-ssh-count -->     |
-|   ss-count    |      <!-- osu-ss-count --><!-- osu-ss-count -->      |
-|   sh-count    |      <!-- osu-sh-count --><!-- osu-sh-count -->      |
-|    s-count    |       <!-- osu-s-count --><!-- osu-s-count -->       |
-|    a-count    |       <!-- osu-a-count --><!-- osu-a-count -->       |
+|      Tag      |          Description           |                        Value                         |
+| :-----------: | :----------------------------: | :--------------------------------------------------: |
+| last-updated  | When was osu-profile last run? |  <!-- osu-last-updated --><!-- osu-last-updated -->  |
+|    avatar     |         URL to avatar          |        <!-- osu-avatar --><!-- osu-avatar -->        |
+|      id       |                                |            <!-- osu-id --><!-- osu-id -->            |
+|     name      |            Username            |          <!-- osu-name --><!-- osu-name -->          |
+|      pp       |           Rounded pp           |            <!-- osu-pp --><!-- osu-pp -->            |
+|   accuracy    |                                |      <!-- osu-accuracy --><!-- osu-accuracy -->      |
+|     level     |                                |         <!-- osu-level --><!-- osu-level -->         |
+|   join-date   |                                |     <!-- osu-join-date --><!-- osu-join-date -->     |
+|    country    |                                |       <!-- osu-country --><!-- osu-country -->       |
+| country-short |          Country code          | <!-- osu-country-short --><!-- osu-country-short --> |
+|  play-count   |                                |    <!-- osu-play-count --><!-- osu-play-count -->    |
+|   play-time   |                                |     <!-- osu-play-time --><!-- osu-play-time -->     |
+|   hit-count   |                                |     <!-- osu-hit-count --><!-- osu-hit-count -->     |
+|   50-count    |                                |      <!-- osu-50-count --><!-- osu-50-count -->      |
+|   100-count   |                                |     <!-- osu-100-count --><!-- osu-100-count -->     |
+|   300-count   |                                |     <!-- osu-300-count --><!-- osu-300-count -->     |
+|  total-score  |                                |   <!-- osu-total-score --><!-- osu-total-score -->   |
+| ranked-score  |                                |  <!-- osu-ranked-score --><!-- osu-ranked-score -->  |
+|  global-rank  |                                |   <!-- osu-global-rank --><!-- osu-global-rank -->   |
+| country-rank  |                                |  <!-- osu-country-rank --><!-- osu-country-rank -->  |
+|   ssh-count   |        Silver SS count         |     <!-- osu-ssh-count --><!-- osu-ssh-count -->     |
+|   ss-count    |                                |      <!-- osu-ss-count --><!-- osu-ss-count -->      |
+|   sh-count    |         Silver S count         |      <!-- osu-sh-count --><!-- osu-sh-count -->      |
+|    s-count    |                                |       <!-- osu-s-count --><!-- osu-s-count -->       |
+|    a-count    |                                |       <!-- osu-a-count --><!-- osu-a-count -->       |

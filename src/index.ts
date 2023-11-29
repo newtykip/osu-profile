@@ -33,9 +33,13 @@ async function run() {
 
 	// find repository information
 	const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
+	const ref = process.env.GITHUB_REF;
 	const { data: readme } = await octokit.rest.repos.getReadme({
-		owner, repo
+		owner, repo, ref
 	}); // todo: support custom files
+	const branch = ref.split("/").slice(2).join("/");
+
+	console.log(`Found repository ${owner}/${repo} (${branch})`);
 	
 	// manipulate readme
 	let readme_content = Buffer.from(readme.content, "base64").toString("utf-8");
@@ -43,16 +47,17 @@ async function run() {
 	[
 		["last-updated", format_date()],
 		["id", profile.id],
+		["avatar", `https://a.ppy.sh/${profile.id}`],
 		["name", profile.name],
-		["pp", profile.pp.toLocaleString()],
+		["pp", Math.round(profile.pp).toLocaleString()],
 		["accuracy", profile.acc],
-		["level", profile.lvl.toLocaleString()],
+		["level", Math.floor(profile.lvl).toLocaleString()],
 		["join-date", format_date(profile.join)],
 
 		["country", profile.country.full],
 		["country-short", profile.country.short],
 
-		["play-count", profile.play.count].toLocaleString(),
+		["play-count", profile.play.count.toLocaleString()],
 		["play-time", humanize_time(profile.play.time * 1000)],
 
 		["hit-count", Object.values(profile.hits).reduce((a, b) => a + b).toLocaleString()],
@@ -81,10 +86,15 @@ async function run() {
 	await octokit.rest.repos.createOrUpdateFileContents({
 		owner,
 		repo,
+		branch,
 		path: readme.path,
 		sha: readme.sha,
 		content: encoded_content,
-		message: "Updated osu! profile data"
+		message: "Updated osu! profile data",
+		committer: {
+			name: "osu!profile",
+			email: `${process.env.GITHUB_ACTOR_ID}@users.noreply.github.com`
+		}
 	});
 }
 

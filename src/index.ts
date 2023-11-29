@@ -57,7 +57,7 @@ async function run() {
 	let file_content = Buffer.from(file["content"], "base64").toString("utf-8");
 
 	[
-		["last-updated", format_date()],
+		["last-updated", format_date(undefined)],
 		["id", profile.id],
 		["avatar", `https://a.ppy.sh/${profile.id}`],
 		["name", profile.name],

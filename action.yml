@@ -12,6 +12,8 @@ inputs:
   game-mode:
     description: 'osu! game mode to track'
     default: osu
+  file-path:
+    description: 'Path to the file to update'
   token:
     description: 'The GitHub token to use for manipulating the repository.'
     required: true

@@ -34,15 +34,20 @@ async function run() {
 	// find repository information
 	const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
 	const ref = process.env.GITHUB_REF;
-	const { data: readme } = await octokit.rest.repos.getReadme({
-		owner, repo, ref
-	}); // todo: support custom files
 	const branch = ref.split("/").slice(2).join("/");
-
 	console.log(`Found repository ${owner}/${repo} (${branch})`);
+
+	// get file
+	const path = core.getInput("file-path");
+
+	const { data: file } = path ? await octokit.rest.repos.getContent({
+		owner, repo, ref, path
+	}) : await octokit.rest.repos.getReadme({
+		owner, repo, ref
+	});
 	
-	// manipulate readme
-	let readme_content = Buffer.from(readme.content, "base64").toString("utf-8");
+	// manipulate file
+	let file_content = Buffer.from(file["content"], "base64").toString("utf-8");
 
 	[
 		["last-updated", format_date()],
@@ -77,23 +82,23 @@ async function run() {
 		["s-count", profile.ranks.s.toLocaleString()],
 		["a-count", profile.ranks.a.toLocaleString()]
 	].forEach(([tag, value]: string[]) => {
-		readme_content = replace_tag(readme_content, tag, value);
+		file_content = replace_tag(file_content, tag, value);
 	});
 
 	// update the readme
-	const encoded_content = Buffer.from(readme_content).toString("base64");
+	const encoded_content = Buffer.from(file_content).toString("base64");
 
 	await octokit.rest.repos.createOrUpdateFileContents({
 		owner,
 		repo,
 		branch,
-		path: readme.path,
-		sha: readme.sha,
+		path: file["path"],
+		sha: file["sha"],
 		content: encoded_content,
 		message: "Updated osu! profile data",
 		committer: {
 			name: "osu!profile",
-			email: `${process.env.GITHUB_ACTOR_ID}@users.noreply.github.com`
+			email: "osu-profile@newty.dev"
 		}
 	});
 }

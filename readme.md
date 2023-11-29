@@ -37,14 +37,14 @@ Each of these tags must be surrounded in a HTML comment in order for osu!profile
 | country        | Your country!                       | <!--osu-country-->United Kingdom<!--osu-country-->                          |
 | country-code   | Your country's code!                | <!--osu-country-code-->GB<!--osu-country-code-->                            |
 | pp             | Your overall pp!                    | <!--osu-pp-->5,172.85<!--osu-pp-->                                              |
-| level          | Your level!                         | <!--osu-level-->100.21<!--osu-level-->                                         |
-| time-ms        | The time you have played for in ms! | <!--osu-time-ms-->2,816,863,000<!--osu-time-ms-->                                        |
-| time           | The time you have played for!       | <!--osu-time-->1 month, 2 days, 3 hours, 57 minutes, and 43 secondssssssssssssssssssssssssssssssssssssssssssss<!--osu-time--> |
+| level          | Your level!                         | <!--osu-level-->100<!--osu-level-->                                         |
+| time-ms        | The time you have played for in ms! | <!--osu-time-ms-->2,816,953,000<!--osu-time-ms-->                                        |
+| time           | The time you have played for!       | <!--osu-time-->1 month, 2 days, 3 hours, 59 minutes, and 13 secondsssssssssssssssssssssssssssssssssssssssssssss<!--osu-time--> |
 | accuracy       | Your overall account accuracy!      | <!--osu-accuracy-->99.36<!--osu-accuracy-->                                 |
 | join-date      | Your join date!                     | <!--osu-join-date-->18/01/2020 19:01:48<!--osu-join-date-->         |
-| play-count     | Your play count!                    | <!--osu-play-count-->61,835<!--osu-play-count-->                            |
+| play-count     | Your play count!                    | <!--osu-play-count-->61,838<!--osu-play-count-->                            |
 | ranked-score   | Your ranked score!                  | <!--osu-ranked-score-->8,642,839,558<!--osu-ranked-score-->                 |
-| unranked-score | Your unranked score!                | <!--osu-unranked-score-->39,626,575,507<!--osu-unranked-score-->                          |
+| unranked-score | Your unranked score!                | <!--osu-unranked-score-->39,627,088,507<!--osu-unranked-score-->                          |
 | total-score    | Your total score!                   | <!--osu-total-score-->48,269,928,065<!--osu-total-score-->                  |
 | hit-count      | Your total hit count!               | <!--osu-hit-count-->9,190,793<!--osu-hit-count-->                                    |
 | ss             | The amount of SSes you have!        | <!--osu-ss-->160<!--osu-ss-->                                               |

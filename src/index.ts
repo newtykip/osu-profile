@@ -3,6 +3,7 @@ import * as github from "@actions/github";
 import { v1, auth } from "osu-api-extended";
 import replace_tag from "./utils/replace_tag";
 import format_date from "./utils/format_date";
+import error from "./utils/error";
 import humanize_time from "./utils/humanize_time";
 
 async function run() {
@@ -14,14 +15,13 @@ async function run() {
 	const game_mode = core.getInput("game-mode");
 	
 	if (game_mode !== "osu" && game_mode !== "taiko" && game_mode !== "fruits" && game_mode !== "mania") {
-		core.setFailed("Invalid game mode.");
-		process.exit(1);
+		error("Invalid game mode.");
 	}
 	
 	// get profile data
 	const profile_id = core.getInput("profile-id");
 	const profile = await v1.user.details(profile_id, {
-		mode: game_mode,
+		mode: game_mode as any,
 		type: "id"
 	});
 	
@@ -39,12 +39,19 @@ async function run() {
 
 	// get file
 	const path = core.getInput("file-path");
+	let file;
 
-	const { data: file } = path ? await octokit.rest.repos.getContent({
-		owner, repo, ref, path
-	}) : await octokit.rest.repos.getReadme({
-		owner, repo, ref
-	});
+	try {
+		file = (path ? await octokit.rest.repos.getContent({
+			owner, repo, ref, path
+		}) : await octokit.rest.repos.getReadme({
+			owner, repo, ref
+		})).data;
+	} catch {
+		error("Failed to find file.");
+	}
+
+	console.log(`Modifying file ${file["path"]}`);
 	
 	// manipulate file
 	let file_content = Buffer.from(file["content"], "base64").toString("utf-8");

@@ -13,4 +13,4 @@ jobs:
               with:
                 profile-id: '16009610'
                 api-key: ${{ secrets.osu }}
-                file-path: example.md
+                file-path: exampled.md

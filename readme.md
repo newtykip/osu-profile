@@ -36,12 +36,12 @@ Each of these tags must be surrounded in a HTML comment in order for osu!profile
 | country-rank   | Your rank in your country!          | <!--osu-country-rank-->2,390<!--osu-country-rank-->                        |
 | country        | Your country!                       | <!--osu-country-->United Kingdom<!--osu-country-->                          |
 | country-code   | Your country's code!                | <!--osu-country-code-->GB<!--osu-country-code-->                            |
-| pp             | Your overall pp!                    | <!--osu-pp-->5,172.85<!--osu-pp-->                                              |
+| pp             | Your overall pp!                    | <!--osu-pp-->5,173<!--osu-pp-->                                              |
 | level          | Your level!                         | <!--osu-level-->100<!--osu-level-->                                         |
 | time-ms        | The time you have played for in ms! | <!--osu-time-ms-->2,816,953,000<!--osu-time-ms-->                                        |
 | time           | The time you have played for!       | <!--osu-time-->1 month, 2 days, 3 hours, 59 minutes, and 13 secondsssssssssssssssssssssssssssssssssssssssssssss<!--osu-time--> |
 | accuracy       | Your overall account accuracy!      | <!--osu-accuracy-->99.36<!--osu-accuracy-->                                 |
-| join-date      | Your join date!                     | <!--osu-join-date-->18/01/2020 19:01:48<!--osu-join-date-->         |
+| join-date      | Your join date!                     | <!--osu-join-date-->18/01/2020 19:01<!--osu-join-date-->         |
 | play-count     | Your play count!                    | <!--osu-play-count-->61,838<!--osu-play-count-->                            |
 | ranked-score   | Your ranked score!                  | <!--osu-ranked-score-->8,642,839,558<!--osu-ranked-score-->                 |
 | unranked-score | Your unranked score!                | <!--osu-unranked-score-->39,627,088,507<!--osu-unranked-score-->                          |

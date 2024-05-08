@@ -9,7 +9,7 @@ jobs:
         name: Update readme with the latest stats using osu-profile!
         runs-on: ubuntu-latest
         steps:
-            - uses: newtykins/osu-profile@v2
+            - uses: newtykip/osu-profile@v2
               with:
                 profile-id: '16009610'
                 api-key: ${{ secrets.osu }}

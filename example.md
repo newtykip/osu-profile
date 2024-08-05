@@ -1,8 +1,8 @@
-Last updated: <!-- osu-last-updated -->29/07/2024 00:39 GMT<!-- osu-last-updated -->
+Last updated: <!-- osu-last-updated -->05/08/2024 00:40 GMT<!-- osu-last-updated -->
 
 |      Tag      |          Description           |                                              Value                                               |
 | :-----------: | :----------------------------: | :----------------------------------------------------------------------------------------------: |
-| last-updated  | When was osu-profile last run? |                <!-- osu-last-updated -->29/07/2024 00:39 GMT<!-- osu-last-updated -->                |
+| last-updated  | When was osu-profile last run? |                <!-- osu-last-updated -->05/08/2024 00:40 GMT<!-- osu-last-updated -->                |
 |    avatar     |         URL of avatar          |                 <!-- osu-avatar -->https://a.ppy.sh/16009610<!-- osu-avatar -->                  |
 |      id       |                                |                              <!-- osu-id -->16009610<!-- osu-id -->                              |
 |     name      |            Username            |                            <!-- osu-name -->Newt x3<!-- osu-name -->                             |
@@ -12,18 +12,18 @@ Last updated: <!-- osu-last-updated -->29/07/2024 00:39 GMT<!-- osu-last-updated
 |   join-date   |                                |                   <!-- osu-join-date -->18/01/2020 19:18 GMT<!-- osu-join-date -->                   |
 |    country    |                                |                      <!-- osu-country -->United Kingdom<!-- osu-country -->                      |
 | country-short |          Country code          |                      <!-- osu-country-short -->GB<!-- osu-country-short -->                      |
-|  play-count   |                                |                       <!-- osu-play-count -->62,326<!-- osu-play-count -->                       |
-|   play-time   |                                | <!-- osu-play-time -->1 month, 2 days, 10 hours, 3 minutes, and 27 seconds<!-- osu-play-time --> |
-|   hit-count   |                                |                      <!-- osu-hit-count -->9,266,297<!-- osu-hit-count -->                       |
-|   50-count    |                                |                         <!-- osu-50-count -->68,727<!-- osu-50-count -->                         |
-|   100-count   |                                |                       <!-- osu-100-count -->595,204<!-- osu-100-count -->                        |
-|   300-count   |                                |                      <!-- osu-300-count -->8,602,366<!-- osu-300-count -->                       |
-|  total-score  |                                |                  <!-- osu-total-score -->48,614,362,147<!-- osu-total-score -->                  |
-| ranked-score  |                                |                 <!-- osu-ranked-score -->8,685,100,083<!-- osu-ranked-score -->                  |
-|  global-rank  |                                |                      <!-- osu-global-rank -->73,596<!-- osu-global-rank -->                      |
-| country-rank  |                                |                     <!-- osu-country-rank -->2,703<!-- osu-country-rank -->                      |
+|  play-count   |                                |                       <!-- osu-play-count -->62,395<!-- osu-play-count -->                       |
+|   play-time   |                                | <!-- osu-play-time -->1 month, 2 days, 10 hours, 50 minutes, and 8 seconds<!-- osu-play-time --> |
+|   hit-count   |                                |                      <!-- osu-hit-count -->9,275,880<!-- osu-hit-count -->                       |
+|   50-count    |                                |                         <!-- osu-50-count -->68,754<!-- osu-50-count -->                         |
+|   100-count   |                                |                       <!-- osu-100-count -->595,878<!-- osu-100-count -->                        |
+|   300-count   |                                |                      <!-- osu-300-count -->8,611,248<!-- osu-300-count -->                       |
+|  total-score  |                                |                  <!-- osu-total-score -->48,667,809,668<!-- osu-total-score -->                  |
+| ranked-score  |                                |                 <!-- osu-ranked-score -->8,687,050,573<!-- osu-ranked-score -->                  |
+|  global-rank  |                                |                      <!-- osu-global-rank -->73,793<!-- osu-global-rank -->                      |
+| country-rank  |                                |                     <!-- osu-country-rank -->2,710<!-- osu-country-rank -->                      |
 |   ssh-count   |        Silver SS count         |                         <!-- osu-ssh-count -->116<!-- osu-ssh-count -->                          |
 |   ss-count    |                                |                           <!-- osu-ss-count -->44<!-- osu-ss-count -->                           |
 |   sh-count    |         Silver S count         |                          <!-- osu-sh-count -->309<!-- osu-sh-count -->                           |
 |    s-count    |                                |                           <!-- osu-s-count -->430<!-- osu-s-count -->                            |
-|    a-count    |                                |                           <!-- osu-a-count -->983<!-- osu-a-count -->                            |
+|    a-count    |                                |                           <!-- osu-a-count -->984<!-- osu-a-count -->                            |

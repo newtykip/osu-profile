@@ -1,13 +1,13 @@
-Last updated: <!-- osu-last-updated -->28/10/2024 00:46 GMT<!-- osu-last-updated -->
+Last updated: <!-- osu-last-updated -->04/11/2024 00:45 GMT<!-- osu-last-updated -->
 
 |      Tag      |          Description           |                                              Value                                               |
 | :-----------: | :----------------------------: | :----------------------------------------------------------------------------------------------: |
-| last-updated  | When was osu-profile last run? |                <!-- osu-last-updated -->28/10/2024 00:46 GMT<!-- osu-last-updated -->                |
+| last-updated  | When was osu-profile last run? |                <!-- osu-last-updated -->04/11/2024 00:45 GMT<!-- osu-last-updated -->                |
 |    avatar     |         URL of avatar          |                 <!-- osu-avatar -->https://a.ppy.sh/16009610<!-- osu-avatar -->                  |
 |      id       |                                |                              <!-- osu-id -->16009610<!-- osu-id -->                              |
 |     name      |            Username            |                            <!-- osu-name -->Newt x3<!-- osu-name -->                             |
-|      pp       |           Rounded pp           |                               <!-- osu-pp -->5,297<!-- osu-pp -->                                |
-|   accuracy    |                                |                         <!-- osu-accuracy -->99.36<!-- osu-accuracy -->                          |
+|      pp       |           Rounded pp           |                               <!-- osu-pp -->5,337<!-- osu-pp -->                                |
+|   accuracy    |                                |                         <!-- osu-accuracy -->99.29<!-- osu-accuracy -->                          |
 |     level     |                                |                             <!-- osu-level -->100<!-- osu-level -->                              |
 |   join-date   |                                |                   <!-- osu-join-date -->18/01/2020 19:18 GMT<!-- osu-join-date -->                   |
 |    country    |                                |                      <!-- osu-country -->United Kingdom<!-- osu-country -->                      |
@@ -20,8 +20,8 @@ Last updated: <!-- osu-last-updated -->28/10/2024 00:46 GMT<!-- osu-last-updated
 |   300-count   |                                |                      <!-- osu-300-count -->8,612,491<!-- osu-300-count -->                       |
 |  total-score  |                                |                  <!-- osu-total-score -->48,669,914,984<!-- osu-total-score -->                  |
 | ranked-score  |                                |                 <!-- osu-ranked-score -->8,687,050,573<!-- osu-ranked-score -->                  |
-|  global-rank  |                                |                      <!-- osu-global-rank -->76,345<!-- osu-global-rank -->                      |
-| country-rank  |                                |                     <!-- osu-country-rank -->2,809<!-- osu-country-rank -->                      |
+|  global-rank  |                                |                      <!-- osu-global-rank -->76,423<!-- osu-global-rank -->                      |
+| country-rank  |                                |                     <!-- osu-country-rank -->2,841<!-- osu-country-rank -->                      |
 |   ssh-count   |        Silver SS count         |                         <!-- osu-ssh-count -->116<!-- osu-ssh-count -->                          |
 |   ss-count    |                                |                           <!-- osu-ss-count -->44<!-- osu-ss-count -->                           |
 |   sh-count    |         Silver S count         |                          <!-- osu-sh-count -->309<!-- osu-sh-count -->                           |

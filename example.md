@@ -1,8 +1,8 @@
-Last updated: <!-- osu-last-updated -->09/12/2024 00:51 GMT<!-- osu-last-updated -->
+Last updated: <!-- osu-last-updated -->16/12/2024 00:51 GMT<!-- osu-last-updated -->
 
 |      Tag      |          Description           |                                              Value                                               |
 | :-----------: | :----------------------------: | :----------------------------------------------------------------------------------------------: |
-| last-updated  | When was osu-profile last run? |                <!-- osu-last-updated -->09/12/2024 00:51 GMT<!-- osu-last-updated -->                |
+| last-updated  | When was osu-profile last run? |                <!-- osu-last-updated -->16/12/2024 00:51 GMT<!-- osu-last-updated -->                |
 |    avatar     |         URL of avatar          |                 <!-- osu-avatar -->https://a.ppy.sh/16009610<!-- osu-avatar -->                  |
 |      id       |                                |                              <!-- osu-id -->16009610<!-- osu-id -->                              |
 |     name      |            Username            |                            <!-- osu-name -->Newt x3<!-- osu-name -->                             |
@@ -20,10 +20,10 @@ Last updated: <!-- osu-last-updated -->09/12/2024 00:51 GMT<!-- osu-last-updated
 |   300-count   |                                |                      <!-- osu-300-count -->8,612,491<!-- osu-300-count -->                       |
 |  total-score  |                                |                  <!-- osu-total-score -->48,669,914,984<!-- osu-total-score -->                  |
 | ranked-score  |                                |                 <!-- osu-ranked-score -->8,687,050,573<!-- osu-ranked-score -->                  |
-|  global-rank  |                                |                      <!-- osu-global-rank -->71,544<!-- osu-global-rank -->                      |
-| country-rank  |                                |                     <!-- osu-country-rank -->2,645<!-- osu-country-rank -->                      |
-|   ssh-count   |        Silver SS count         |                         <!-- osu-ssh-count -->116<!-- osu-ssh-count -->                          |
-|   ss-count    |                                |                           <!-- osu-ss-count -->44<!-- osu-ss-count -->                           |
-|   sh-count    |         Silver S count         |                          <!-- osu-sh-count -->309<!-- osu-sh-count -->                           |
-|    s-count    |                                |                           <!-- osu-s-count -->430<!-- osu-s-count -->                            |
-|    a-count    |                                |                           <!-- osu-a-count -->984<!-- osu-a-count -->                            |
+|  global-rank  |                                |                      <!-- osu-global-rank -->71,885<!-- osu-global-rank -->                      |
+| country-rank  |                                |                     <!-- osu-country-rank -->2,656<!-- osu-country-rank -->                      |
+|   ssh-count   |        Silver SS count         |                         <!-- osu-ssh-count -->115<!-- osu-ssh-count -->                          |
+|   ss-count    |                                |                           <!-- osu-ss-count -->45<!-- osu-ss-count -->                           |
+|   sh-count    |         Silver S count         |                          <!-- osu-sh-count -->315<!-- osu-sh-count -->                           |
+|    s-count    |                                |                           <!-- osu-s-count -->417<!-- osu-s-count -->                            |
+|    a-count    |                                |                           <!-- osu-a-count -->1,068<!-- osu-a-count -->                            |
